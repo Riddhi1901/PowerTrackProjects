@@ -8,7 +8,7 @@ on:
 
 defaults:
   run:
-    # Replace 'your-folder-name' with the exact name of the folder you uploaded
+    # Replace 'your-folder-name' with the exact name of your uploaded folder
     working-directory: ./MP3_TAG_READ_EDIT
 
 jobs:
@@ -30,3 +30,7 @@ jobs:
       
     - name: make distcheck
       run: make distcheck
+
+    - name: Run the Code
+      # Replace 'your_executable_name' with the actual name of your output file
+      run: ./mp3_tg_re
