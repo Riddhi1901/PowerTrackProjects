@@ -1,0 +1,25 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+defaults:
+  run:
+    working-directory: ./Lexical_Analyzer
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      
+    - name: Compile with Makefile
+      run: make
+      
+    - name: Run the Program
+      # 🛠️ Changed this line to match your compiled output name
+      run: ./lexical_analyzer test.c
